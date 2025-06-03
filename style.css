@@ -1,0 +1,106 @@
+body {
+    background-color: #000000;
+    font-family: "Poppins", sans-serif;
+}
+
+#hero {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 100%), 
+                url('img/Background/rm373batch9-036.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+}
+
+
+h1 {
+    font-weight: 600;
+}
+
+h3 {
+    font-weight: 300;
+}
+
+.navbar-nav .nav-link:hover {
+    color: orange !important;
+}
+
+.tech-card {
+    background-color: #19191a;
+    width: 100px;
+    height: 120px;
+    padding: 20px;
+    border-bottom: 3px solid orange;
+    font-size: 9pt;
+    transition: background-color 0.3s ease;
+}
+
+.tech-card:hover {
+    background-color: #616161;
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .tech-card {
+        width: 80px;
+        height: 100px;
+        font-size: 8pt;
+    }
+
+    #hero h1, #hero h3 {
+        font-size: 1.5rem;
+    }
+}
+.projeto-card {
+    width: 200px;
+    padding: 15px;
+    background-color: #19191a;
+    border-bottom: 3px solid orange;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+.projeto-card:hover {
+    background-color: #333;
+    transform: scale(1.03);
+}
+.modal-content {
+    border-radius: 10px;
+}
+.modal-body h4 {
+    color: orange;
+}
+.img-modal {
+    width: 200px;         /* define a largura das imagens */
+    height: auto;         /* mantém a proporção */
+    border-radius: 6px;
+    margin: 5px;
+    object-fit: cover;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.img-modal:hover {
+    transform: scale(1.05);
+}
+
+.img-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+section {
+    min-height: 100vh;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

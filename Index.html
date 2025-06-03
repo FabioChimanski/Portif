@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous" />
+
+    <!-- Estilo personalizado -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Fábio Chimanski</title>
+</head>
+<body>
+    <!-- NAVEGAÇÃO -->
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #000000; border-bottom: 3px solid orange;">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-white" href="#hero">Fábio Chimanski</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="#hero">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#projetos">Projetos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#contato">Contatos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="d-flex flex-column justify-content-center align-items-center min-vh-100">
+        <div class="text-center">
+            <h3>Olá Visitante</h3>
+            <h1>Sou o Fábio!</h1>
+            <h3>Desenvolvedor Fullstack</h3>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+            <a href="https://github.com/FabioChimanski" class="mx-2" aria-label="GitHub"><img src="img/Icones/github.png" width="24" alt="GitHub" /></a>
+            <a href="https://www.linkedin.com/in/f%C3%A1bio-chimanski-890900130/" class="mx-2" aria-label="LinkedIn"><img src="img/Icones/linkdn.png" width="24" alt="LinkedIn" /></a>
+
+        </div>
+    </section>
+
+    <!-- PROJETOS -->
+
+    <section id="projetos" class="container">
+        <h2 class="text-center mb-4">Projetos</h2>
+
+        <!-- Card de Projeto -->
+        <div class="card projeto-card text-center" data-bs-toggle="modal" data-bs-target="#modalProjeto1">
+            <img src="img/projetos/Loja Online/loja 1.PNG" alt="Miniatura Projeto Loja 1" class="img-fluid rounded" />
+            <div class="mt-2 text-white">Loja Online</div>
+        </div>
+
+        <!-- Modal do Projeto -->
+        <div class="modal fade" id="modalProjeto1" tabindex="-1" aria-labelledby="modalProjeto1Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-white">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="modalProjeto1Label">Loja Online</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <!-- Texto à esquerda -->
+                            <div class="col-12 col-md-6">
+                                <h4 class="mb-3">Descrição do Projeto</h4>
+                                <p>Este projeto é uma aplicação web completa de e-commerce, simulando o funcionamento real de uma loja virtual.</p>
+                                <p style="font-size: 10pt;">A plataforma conta com uma tela de login segura, uma página inicial com carrossel de destaques, uma área de produtos organizada por categorias, carrinho de compras dinâmico e processo de finalização de pedido.
+
+                                No painel administrativo, o sistema permite cadastro e edição de produtos, controle de estoque em tempo real, visualização de relatórios de vendas e gerenciamento de pedidos. A interface é responsiva e adaptada para diferentes dispositivos, com foco em praticidade e usabilidade tanto para o cliente quanto para o administrador.</p>
+                                <p><strong>Tecnologias utilizadas:</strong><br> HTML5, CSS3, JavaScript, PHP, Bootstrap e MySQL.</p>
+                                <a href="https://github.com/FabioChimanski" target="_blank" class="btn btn-outline-warning mt-3">Ver no GitHub</a>
+                            </div>
+
+                            <!-- Imagens reduzidas à direita -->
+                            <div class="col-12 col-md-6">
+                                <div class="img-gallery">
+                                    <img src="img/projetos/Loja Online/loja 1.PNG" class="img-modal" alt="Página inicial" />
+                                    <img src="img/projetos/Loja Online/loja 2.PNG" class="img-modal" alt="Lista de produtos" />
+                                    <img src="img/projetos/Loja Online/loja 3.PNG" class="img-modal" alt="Carrinho" />
+                                    <img src="img/projetos/Loja Online/loja 4.PNG" class="img-modal" alt="Contato" />
+                                    <img src="img/projetos/Loja Online/loja 5.PNG" class="img-modal" alt="Contato" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- SOBRE -->
+    <section id="sobre" class="container">
+        <h2 class="text-center mb-4">Sobre Mim</h2>
+        <p class="text-center fs-5">
+            Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> e estou em busca da minha primeira oportunidade como desenvolvedor.
+        </p>
+        <p class="text-center fs-5">
+            Tenho experiência prática com <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong>, <strong>PHP</strong>, <strong>Python</strong>, <strong>MySQL</strong> e <strong>Bootstrap</strong>. Estou constantemente criando projetos pessoais e aprimorando minhas habilidades.
+        </p>
+        <div class="d-flex justify-content-center flex-wrap gap-4 mt-4">
+            <div class="card tech-card text-center"><img src="img/Icones/html.png" alt="HTML5" width="55" /><p class="mb-0 mt-2" style="color: orange; font-size: 8pt;">HTML5</p></div>
+            <div class="card tech-card text-center" ><img src="img/Icones/css.png" alt="CSS3" width="55" /><p class="mb-0 mt-2" style="color: orange; font-size: 8pt;">CSS3</p></div>
+            <div class="card tech-card text-center" ><img src="img/Icones/js.png" alt="JavaScript" width="55" /><p class="mb-0 mt-2" style="color: orange; font-size: 8pt;">JavaScript</p></div>
+            <div class="card tech-card text-center"><img src="img/Icones/php.png" alt="PHP" width="55" /><p class="mb-0 mt-2" style="color: orange; font-size: 8pt;">PHP</p></div>
+            <div class="card tech-card text-center"><img src="img/Icones/boodstrap.png" alt="Bootstrap" width="55" /><p class="mb-0 mt-2" style="color: orange; font-size: 8pt;">Bootstrap</p></div>
+            <div class="card tech-card text-center"><img src="img/Icones/mysql.png" alt="MySQL" width="55" /><p class="mb-0 mt-2" style="color: orange; font-size: 8pt;">MySQL</p></div>
+            <div class="card tech-card text-center"><img src="img/Icones/python.png" alt="Python" width="55" /><p class="mb-0 mt-2" style="color: orange; font-size: 8pt;">Python</p></div>
+        </div>
+    </section>
+
+    <!-- CONTATO (placeholder) -->
+    <section id="contato" class="container text-center">
+        <h2>Gostou do que viu? Entre em contato e vamos conversar!</h2>
+        <div class="d-flex justify-content-center mt-3">
+            <a href="mailto:fabiochime@live.com" class="mx-2" aria-label="Email"><img src="img/Icones/email.png" width="24" alt="Email" /></a>
+            <a href="https://wa.me/5541987588970?text=Olá!%20Gostaria%20de%20mais%20informações." class="mx-2" aria-label="WhatsApp"><img src="img/Icones/wpp.png" width="24" alt="WhatsApp" /></a>
+        </div>
+
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
