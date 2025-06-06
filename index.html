@@ -209,8 +209,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <script>
+      // 1) Garante que, ao carregar, a página fique no topo
       window.scrollTo(0, 0);
-
+    
       AOS.init({ duration: 1000, once: true });
     
       // Efeito digitar
@@ -250,9 +251,10 @@
         const sections = Array.from(document.querySelectorAll("section"));
         const scrollPos = window.scrollY;
         const offset = 5;
-        const headerOffset = 10;
+        const headerOffset = 80;
     
         for (let sec of sections) {
+          // somente se a seção estiver abaixo da área visível atual + headerOffset
           if (sec.offsetTop > scrollPos + headerOffset + offset) {
             const targetY = sec.offsetTop - headerOffset;
             window.scrollTo({ top: targetY, behavior: "smooth" });
@@ -287,6 +289,7 @@
       // Também chama ao carregar, para esconder caso já esteja na última seção
       document.addEventListener("DOMContentLoaded", toggleScrollBtn);
     </script>
+    
     
     </body>
     </html>
