@@ -37,7 +37,7 @@
         </div>
       </nav>
     </header>
-  
+
     <main>
       <section id="hero" class="d-flex flex-column justify-content-center align-items-center min-vh-100" data-aos="zoom-in">
         <div class="text-center">
@@ -201,43 +201,90 @@
         </div>
     </div>
 
+    <button id="scroll-btn" aria-label="Descer página">
+      &#8595;
+    </button>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <script>
-        AOS.init({ duration: 1000, once: true });
-      
-        // Efeito digitar
-        const textos = ["Sou o Fábio!", "Desenvolvedor Fullstack"];
-        let i = 0, j = 0, escrevendo = true;
-        const target = document.getElementById("typed-text");
-      
-        function digitar() {
-          if (i < textos.length) {
-            if (escrevendo) {
-              if (j <= textos[i].length) {
-                target.innerHTML = textos[i].substring(0, j) + "<span class='cursor'>|</span>";
-                j++;
-                setTimeout(digitar, 100);
-              } else {
-                escrevendo = false;
-                setTimeout(digitar, 1500);
-              }
+      AOS.init({ duration: 1000, once: true });
+    
+      // Efeito digitar
+      const textos = ["Sou o Fábio!", "Desenvolvedor Fullstack"];
+      let i = 0, j = 0, escrevendo = true;
+      const target = document.getElementById("typed-text");
+    
+      function digitar() {
+        if (i < textos.length) {
+          if (escrevendo) {
+            if (j <= textos[i].length) {
+              target.innerHTML = textos[i].substring(0, j) + "<span class='cursor'>|</span>";
+              j++;
+              setTimeout(digitar, 100);
             } else {
-              if (j > 0) {
-                target.innerHTML = textos[i].substring(0, j) + "<span class='cursor'>|</span>";
-                j--;
-                setTimeout(digitar, 50);
-              } else {
-                escrevendo = true;
-                i = (i + 1) % textos.length;
-                setTimeout(digitar, 200);
-              }
+              escrevendo = false;
+              setTimeout(digitar, 1500);
+            }
+          } else {
+            if (j > 0) {
+              target.innerHTML = textos[i].substring(0, j) + "<span class='cursor'>|</span>";
+              j--;
+              setTimeout(digitar, 50);
+            } else {
+              escrevendo = true;
+              i = (i + 1) % textos.length;
+              setTimeout(digitar, 200);
             }
           }
         }
-      
-        document.addEventListener("DOMContentLoaded", digitar);
-      </script>
+      }
+    
+      document.addEventListener("DOMContentLoaded", digitar);
+    
+      // Função que encontra a próxima <section> e rola suavemente até ela, com offset
+      function scrollToNextSection() {
+        const sections = Array.from(document.querySelectorAll("section"));
+        const scrollPos = window.scrollY;
+        const offset = 5;
+        const headerOffset = 10;
+    
+        for (let sec of sections) {
+          if (sec.offsetTop > scrollPos + headerOffset + offset) {
+            const targetY = sec.offsetTop - headerOffset;
+            window.scrollTo({ top: targetY, behavior: "smooth" });
+            return;
+          }
+        }
+      }
+    
+      // Evento que dispara ao clicar no botão
+      document
+        .getElementById("scroll-btn")
+        .addEventListener("click", scrollToNextSection);
+    
+      // (Opcional) Mostrar/ocultar botão dependendo de em qual seção estamos
+      function toggleScrollBtn() {
+        const sections = Array.from(document.querySelectorAll("section"));
+        const scrollPos = window.scrollY;
+        const ultimaSecao = sections[sections.length - 1];
+    
+        if (
+          scrollPos + window.innerHeight >=
+          ultimaSecao.offsetTop + ultimaSecao.offsetHeight - 10
+        ) {
+          document.getElementById("scroll-btn").classList.add("hidden");
+        } else {
+          document.getElementById("scroll-btn").classList.remove("hidden");
+        }
+      }
+    
+      // Atualiza visibilidade toda vez que o usuário rola a página
+      window.addEventListener("scroll", toggleScrollBtn);
+      // Também chama ao carregar, para esconder caso já esteja na última seção
+      document.addEventListener("DOMContentLoaded", toggleScrollBtn);
+    </script>
+    
     </body>
     </html>
