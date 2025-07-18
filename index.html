@@ -53,21 +53,34 @@
       <section id="projetos" class="container" data-aos="fade-up">
         <h2 class="text-center mb-4" style="color: orange;">Projetos</h2>
         <div class="row justify-content-center gap-4">
+      
+          <!-- Card Loja Online -->
           <article class="col-auto">
             <div class="card projeto-card text-center" data-bs-toggle="modal" data-bs-target="#modalProjeto1">
               <img src="img/projetos/Loja Online/loja 1.PNG" class="img-fluid rounded" alt="Projeto Loja Online" />
               <div class="mt-2 text-white">Loja Online</div>
             </div>
           </article>
-  
+      
+          <!-- Card Consultório -->
           <article class="col-auto">
             <div class="card projeto-card text-center" data-bs-toggle="modal" data-bs-target="#modalProjeto2">
               <img src="img/projetos/Consultorio/2.PNG" class="img-fluid rounded" alt="Projeto Consultório" />
               <div class="mt-2 text-white">Consultório</div>
             </div>
           </article>
-        </div>
-        </section>
+      
+          <!-- Card Conversor de Moedas -->
+          <article class="col-auto">
+            <div class="card projeto-card text-center" data-bs-toggle="modal" data-bs-target="#modalProjeto3">
+              <img src="img/projetos/Conversor_moedas/CONVERSOR_MOEDA_1.JPG" class="img-fluid rounded" alt="Projeto Conversor" />
+              <div class="mt-2 text-white">Conversor Moedas</div>
+            </div>
+          </article>
+      
+        </div> <!-- Fim da row -->
+      </section>
+      
   
       <section id="sobre" class="container" data-aos="fade-right">
         <h2 class="text-center mb-4" style="color: orange;">Sobre Mim</h2>
@@ -200,6 +213,55 @@
             </div>
         </div>
     </div>
+
+
+    <div class="modal fade" id="modalProjeto3" tabindex="-1" aria-labelledby="modalProjeto3Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header border-0">
+              <h5 class="modal-title" id="modalProjeto3Label">Conversor de Moedas</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row d-flex align-items-center">
+                <div class="col-12 col-md-5">
+                  <h4 class="mb-3" style="color:orange;">Descrição do Projeto</h4>
+                  <p>Ferramenta interativa desenvolvida com Streamlit que permite consultar a cotação histórica das moedas USD, EUR e BTC em relação ao real (BRL).</p>
+                  <p style="font-size: 10pt;">O usuário seleciona a moeda e o período (até 30 dias), e o sistema retorna uma tabela com os valores de compra, venda, máxima e mínima diárias, além de um gráfico de variação gerado com Matplotlib. Também é possível baixar os dados em CSV, facilitando análises posteriores.</p>
+                  <p><strong>Tecnologias utilizadas:</strong><br> Python, Streamlit, Pandas, Matplotlib e AwesomeAPI.</p>
+                  <a href="https://github.com/FabioChimanski/Conversor_de_moedas.git" target="_blank" class="btn btn-outline-warning mt-3">Ver no GitHub</a>
+                </div>
+      
+                <div class="col-12 col-md-7">
+                  <div id="carouselProjeto3" class="carousel slide">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselProjeto3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselProjeto3" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="img/projetos/Conversor_moedas/CONVERSOR_MOEDA_1.JPG" class="d-block w-100 rounded" alt="Conversor de Moedas screenshot 1" />
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/projetos/Conversor_moedas/CONVERSOR_MOEDA_2.JPG" class="d-block w-100 rounded" alt="Conversor de Moedas screenshot 2" />
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjeto3" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProjeto3" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Próximo</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
 
     <button id="scroll-btn" aria-label="Descer página">
       &#8595;

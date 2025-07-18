@@ -222,3 +222,8 @@ section::before {
 #scroll-btn.hidden {
   display: none;
 }
+
+.projeto-card img {
+  height: 100px;
+  object-fit: cover;
+}
